@@ -3,31 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --darkGrey: #1B1D1F;
+  --black: #111315;
+  --grey: #6F757C;
+  --lightGreen: #BEE3CC;
+  --white: #FEF7EE;
+  --yellow: #F6C768;
+  --red: #ED735D;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: url(/images/bg-cafe.jpg) var(--black) no-repeat top center;
+  background-size: 100%;
+  color: var(--grey)
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+main {
+  background: url(/images/vector.svg) no-repeat 65% 25px var(--darkGrey);
+}
+
+h2 {
+  color: var(--white);
 }
